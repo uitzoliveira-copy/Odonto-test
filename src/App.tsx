@@ -18,12 +18,11 @@ import AIConsultant from "./components/AIConsultant";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  // Scroll reveal logic
   useEffect(() => {
     if (loading) return;
-    
+
     const observerOptions = {
       root: null,
       rootMargin: "0px",
@@ -54,43 +53,33 @@ export default function App() {
         <>
           <CustomCursor />
           <Navbar />
-          
           <main>
             <Hero />
-            
             <div>
               <BeforeAfter />
             </div>
-            
             <div className="reveal">
               <About />
             </div>
-            
             <div className="reveal">
               <Treatments />
             </div>
-            
             <div className="reveal">
               <Testimonials />
             </div>
-            
             <div className="reveal">
               <PaymentMethods />
             </div>
-            
             <div className="reveal">
               <Booking />
             </div>
-            
             <div className="reveal">
               <FAQ />
             </div>
-
             <div className="reveal">
               <Location />
             </div>
           </main>
-
           <Footer />
           <FloatingWhatsApp />
           <AIConsultant />
@@ -100,4 +89,3 @@ export default function App() {
     </div>
   );
 }
-
