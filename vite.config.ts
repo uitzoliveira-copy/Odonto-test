@@ -9,9 +9,12 @@ export default defineConfig(({mode}) => {
     base: '/',
 
     plugins: [react(), tailwindcss()],
-    define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-    },
+    export default defineConfig(({ mode }) => {
+  return {
+    base: '/',
+    plugins: [react(), tailwindcss()],
+  };
+});
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
